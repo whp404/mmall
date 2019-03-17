@@ -69,7 +69,7 @@ public class ShippingServiceImpl implements IShippingService{
     public ServerResponse<PageInfo> list(Integer userId, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum,pageSize);
         List<Shipping> shippings = shippingMapper.selectByShippingIdUserId(userId);
-        PageInfo<Shipping> pageInfo = new PageInfo<>(shippings);
+        PageInfo pageInfo = new PageInfo<>(shippings);
         return ServerResponse.createBySuccess(pageInfo);
     }
 }

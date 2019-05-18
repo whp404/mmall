@@ -13,9 +13,7 @@ import redis.clients.util.Sharded;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by geely
- */
+
 public class RedisShardedPool {
     private static ShardedJedisPool pool;//sharded jedis连接池
     private static Integer maxTotal = Integer.parseInt(PropertiesUtil.getProperty("redis.max.total","20")); //最大连接数
@@ -53,7 +51,7 @@ public class RedisShardedPool {
 
         jedisShardInfoList.add(info1);
         jedisShardInfoList.add(info2);
-
+        //Hashing.MURMUR_HASH 代表采用一致性hash
         pool = new ShardedJedisPool(config,jedisShardInfoList, Hashing.MURMUR_HASH, Sharded.DEFAULT_KEY_TAG_PATTERN);
     }
 

@@ -1,16 +1,14 @@
 package com.mmall.util;
 
-import com.mmall.common.RedisPool;
 import com.mmall.common.RedisShardedPool;
 import lombok.extern.slf4j.Slf4j;
-import redis.clients.jedis.Jedis;
 import redis.clients.jedis.ShardedJedis;
 
 /**
  * Created by geely
  */
 @Slf4j
-public class RedisPoolUtil {
+public class RedisShardPoolUtil {
 
 
     /**

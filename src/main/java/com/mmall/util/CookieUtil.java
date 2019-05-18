@@ -37,7 +37,7 @@ public class CookieUtil {
     public static void writeLoginToken(HttpServletResponse response, String token) {
         Cookie cookie = new Cookie(COOKIE_NAME, token);
         cookie.setDomain(COOKIE_DOMAIN);
-        cookie.setPath("/");//代表只有根目录下的代码才能访问cookie
+        cookie.setPath("/");//代表只有根目录下的代码和页面才能访问cookie
         cookie.setHttpOnly(true);
 
         cookie.setMaxAge(60 * 60 * 24 * 365);//-1代表永不过期

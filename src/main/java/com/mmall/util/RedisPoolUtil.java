@@ -4,10 +4,8 @@ import com.mmall.common.RedisShardedPool;
 import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.ShardedJedis;
 
-import java.security.Key;
-
 @Slf4j
-public class RedisShardPoolUtilbak {
+public class RedisPoolUtil {
 
     /**
      * 设置key的有效期，单位是秒

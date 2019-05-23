@@ -8,7 +8,7 @@ import redis.clients.jedis.ShardedJedis;
  * Created by geely
  */
 @Slf4j
-public class RedisShardPoolUtil {
+public class RedisShardedPoolUtil {
 
 
     /**
